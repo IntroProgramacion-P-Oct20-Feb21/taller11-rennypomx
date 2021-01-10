@@ -20,11 +20,13 @@ public class Ejemplo3 {
         presentarDiagonal(informacion);
     }
     
+    @SuppressWarnings("empty-statement")
     public static void presentarDiagonal(int [][] datos){
         String cadena = "";
         for (int i = 0; i < datos.length; i++) {
             for (int j = 0; j < datos[i].length; j++) {
-                if(i==j){
+                if(i>j){
+                } else {
                     cadena = String.format("%s%s\t", cadena, datos[i][j]);
                 }
             }
